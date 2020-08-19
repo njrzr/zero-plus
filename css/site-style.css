@@ -1,0 +1,196 @@
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+body {
+	background: #36454f;
+	font-family: 'JetBrains Mono';
+}
+
+#container {
+	position: relative;
+	width: 1200px;
+	background: #ffffff;
+	border-left: solid 4px #4169e1bb;
+	border-right: solid 4px #4169e1bb;
+	margin: auto;
+	overflow-x: hidden;
+}
+
+#header {
+	position: relative;
+	background: url('../images/bg3.jpg') no-repeat;
+	background-position: 0% 60%;
+	background-size: 100%;
+	width: 1200px;
+	height: 150px;
+	z-index: 1;
+}
+
+#header::before {
+	content: "";
+	position: absolute;
+	background: #ffffff77;
+	width: 1200px;
+	height: 150px;
+}
+
+.link {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: left;
+	z-index: 1;
+}
+
+.link > ul {
+	list-style: none;
+}
+
+.links {
+	position: relative;
+	display: block;
+	background: #ffffff;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	transition: 300ms ease-in-out;
+}
+
+.links > li > img {
+	width: 30px;
+	height: 30px;
+}
+
+.links::after {
+	position: absolute;
+	top: 14px;
+	left: 64px;
+	color: #36454f;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #ffffff;
+	transform: scale(0, 1);
+	transform-origin: 0% 0%;
+	transition: 200ms ease-in-out;
+}
+
+.lnk1::after {
+	content: "Facebook";
+}
+
+.lnk2::after {
+	content: "Twitter";
+}
+
+.lnk3::after {
+	content: "Instagram";
+}
+
+.links:hover{
+	background: #4169e133;
+	width: 150px;
+	transition: 300ms ease-in-out;
+}
+
+.links:hover::after {
+	transform: scale(1, 1);
+	transition: 300ms ease-in-out;
+}
+
+#banner {
+	position: relative;
+	width: 1150px;
+	height: 150px;
+	float: right;
+}
+
+#banner > ul {
+	position: relative;
+	right: 10px;
+}
+
+#logo {
+	position: relative;
+	background: #ffffffbb url('../images/logo.png') center no-repeat;
+	background-size: 100%;
+	width: 120px;
+	height: 120px;
+	float: right;
+	top: 15px;
+	right: 10px;
+	transition: 250ms ease-in-out;
+}
+
+#lnk-logo {
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+
+#logo:hover {
+	background: #4169e1bb url('../images/logo2.png') center no-repeat;
+	background-size: 100%;
+	transition: 250ms ease-in-out;
+}
+
+.options {
+	position: relative;
+	float: right;
+	width: 120px;
+	height: 100px;
+	top: 15px;
+	margin-right: 10px;
+	background: #ffffffbb;
+	word-break: break-all;
+	color: #36454f;
+	text-align: center;
+	font-weight: bold;
+	list-style-type: none;
+	padding: 10px 0;
+	transition: 250ms ease-in-out;
+}
+
+.options:hover {
+	background: #4169e1bb;
+	color: #ffffff;
+	transition: 250ms ease-in-out;
+}
+
+.options::before {
+	content: "";
+	position: absolute;
+	background: #36454f;
+	width: 120px;
+	height: 120px;
+	top: 0;
+	left: 0;
+	transform: scale(0, .05);
+	transform-origin: 0% 100%;
+	transition: 250ms ease-in-out;
+}
+
+.options:hover::before {
+	transform: scale(1, .05);
+	transform-origin: 0% 100%;
+	transition: 250ms ease-in-out;
+}
+
+#footer {
+	position: relative;
+	width: 1200px;
+	height: 150px;
+	background: #4169e1;
+}
+
+#copyr {
+	position: absolute;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 15px;
+	right: 0;
+	bottom: 0;
+}
