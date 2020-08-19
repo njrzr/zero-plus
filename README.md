@@ -1,3 +1,3 @@
 # README
 
-Repositorio de uso solo para sitio web, no es desarrollo de software.
+Repositorio solo para uso del sitio web, no es para desarrollo de software.
