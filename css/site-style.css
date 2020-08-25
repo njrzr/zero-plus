@@ -275,8 +275,8 @@ body {
 
   #construction {
     font-size: 38px;
-    margin: 0 10px;
-    padding: 10px 40px;
+    margin: 0 auto;
+    padding: 10px 20px;
   }
 
   #copyright {
@@ -306,13 +306,13 @@ body {
 
   #logo {
     background: #ffffff url("../images/logo_text.png") center no-repeat;
-    background-size: 160px;
+    background-size: 140px;
     grid-area: 1/1/2/2;
   }
 
   #logo:hover {
     background: #ffffff url("../images/logo_text2.png") center no-repeat;
-    background-size: 160px;
+    background-size: 140px;
   }
 
   .right-links {
@@ -328,10 +328,10 @@ body {
   }
 
   #construction {
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
-    margin: 0 10px;
-    padding: 10px 40px;
+    margin: 0 auto;
+    padding: 10px 20px;
   }
 
   #copyright {
