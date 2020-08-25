@@ -11,6 +11,16 @@
   box-sizing: border-box;
 }
 
+@font-face{
+	font-family: 'JetBrainsMono';
+  src: url("../fonts/JetBrainsMono-Regular.eot") format("embedded-opentype"),
+       url("../fonts/JetBrainsMono-Regular.woff") format("woff"),
+       url("../fonts/JetBrainsMono-Regular.woff2") format("woff2"),
+       url("../fonts/JetBrainsMono-Bold.eot") format("embedded-opentype"),
+       url("../fonts/JetBrainsMono-Bold.woff") format("woff"),
+       url("../fonts/JetBrainsMono-Bold.woff2") format("woff2")
+}
+
 #welcome {
   position: relative;
   display: grid;
@@ -33,7 +43,7 @@
 /*ES: Estilo general de la pagina - EN: General style of the website*/
 body {
   background: #36454f;
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrainsMono';
 }
 
 #main-container {
