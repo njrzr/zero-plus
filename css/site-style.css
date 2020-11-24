@@ -20,42 +20,25 @@
        url("../fonts/JetBrainsMono-Bold.woff") format("woff"),
        url("../fonts/JetBrainsMono-Bold.woff2") format("woff2")
 }
-
-#welcome {
-  position: relative;
-  display: grid;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 300px;
-}
-
-#construction {
-  background: repeating-linear-gradient(45deg, #000000 0, #000000 10%, #ffff00 10%, #ffff00 20%);
-  padding: 10px 100px;
-  font-size: 64px;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 2px 2px 1px #000000;
-}
 /*#endregion*/
 
 /*ES: Estilo general de la pagina - EN: General style of the website*/
+/*#region*/
 body {
   background: #36454f;
-  font-family: 'JetBrainsMono';
+  font-family: 'JetBrains Mono';
+  font-size: 24px;
 }
 
 #main-container {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
   grid-template-columns: repeat(1, minmax(0, 1fr));
   width: 1200px;
   height: auto;
   margin: auto;
-  border-left: solid 5px #ffffff88;
-  border-right: solid 5px #ffffff88;
+  border-left: solid 5px #ffffff;
+  border-right: solid 5px #ffffff;
 }
 
 #header {
@@ -63,7 +46,6 @@ body {
   display: grid;
   background: #4169e1 url("../images/bg_01.jpg") center;
   background-size: cover;
-  grid-template-rows: repeat(1, minmax(0, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   width: 100%;
   height: 120px;
@@ -86,6 +68,7 @@ body {
 .left-links {
   position: relative;
   background: #ffffff;
+  font-size: .65em;
   width: 40px;
   height: 40px;
   transition: 250ms;
@@ -101,9 +84,9 @@ body {
 .link1::before, .link2::before, .link3::before {
   position: absolute;
   content: "";
-  background: #4169e1;
+  background: #36454f;
   color: #ffffff;
-  text-shadow: 2px 2px 2px #000000;
+  text-shadow: 2px 2px 0 #4169e1;
   width: 0;
   height: 40px;
   padding: 10px 0 10px 20px;
@@ -156,7 +139,7 @@ body {
 
 #logo {
   position: relative;
-  background: #ffffff url("../images/logo1.png");
+  background: #ffffff url("../images/logo2.png");
   background-size: cover;
   width: 120px;
   height: 100%;
@@ -164,7 +147,7 @@ body {
 }
 
 #logo:hover {
-  background: #4169e1 url("../images/logo2.png");
+  background: #36454f url("../images/logo1.png");
   background-size: cover;
   transition: 250ms;
 }
@@ -187,6 +170,7 @@ body {
   width: 100%;
   height: 100%;
   padding-top: 5px;
+  font-size: .65em;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -222,10 +206,178 @@ body {
   transition: 250ms ease-in-out;
 }
 
+#welcome {
+  position: relative;
+  display: grid;
+  background: #4169e1;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+#welcome-text {
+  position: relative;
+  grid-area: 1/1/2/4;
+  background: #36454f;
+  font-size: .8em;
+  text-align: justify;
+  color: #ffffff;
+  margin: 20px 50px;
+  padding: 20px;
+}
+
+#portfolio {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  justify-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border-top: solid 5px #ffffff;
+  border-bottom: solid 5px #ffffff;
+}
+
+#portfolio-title-zero {
+  position: relative;
+  grid-column: 1/4;
+  color: #ffffff;
+  width: 100%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#portfolio-title-zero::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  width: 10px;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  transition: 250ms;
+}
+
+#portfolio-title-one {
+  position: relative;
+  grid-column: 1/4;
+  color: #ffffff;
+  width: 100%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#portfolio-title-one::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  width: 10px;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  transition: 250ms;
+}
+
+#portfolio-title-two {
+  position: relative;
+  grid-column: 1/4;
+  color: #ffffff;
+  width: 100%;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#portfolio-title-two::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  width: 10px;
+  height: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.portfolio {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  transition: 250ms;
+}
+
+.portfolio:hover {
+  transform: scale(1.05);
+  transition: 250ms;
+  z-index: 1;
+}
+
+.portfolio > a {
+  position: relative;
+  display: block;
+  color: #ffffff;
+  font-size: .7em;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+  transition: 250ms;
+}
+
+.portfolio > a:hover {
+  background: #4169e1;
+  transition: 250ms;
+  font-weight: bold;
+}
+
+.portfolio > a > img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.portfolio-button {
+  position: relative;
+  grid-column: 1/4;
+  background: #36454f url("../images/arrow_1.svg") no-repeat center;
+  background-size: 60%;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #ffffff;
+  overflow: hidden;
+  transition: 250ms;
+}
+
+.portfolio-button:hover {
+  background: #4169e1 url("../images/arrow_2.svg") no-repeat center;
+  background-size: 60%;
+  transition: 250ms;
+}
+
+.portfolio-button > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 #footer {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
   grid-template-columns: repeat(5, minmax(0, 1fr));
   background: #4169e1;
   width: 100%;
@@ -235,15 +387,17 @@ body {
 
 #copyright {
   position: relative;
-  grid-area: 5/5/6/6;
+  grid-area: 3/5/4/6;
   text-align: right;
-  font-size: 18px;
+  font-size: .7em;
   font-weight: bold;
   color: #ffffff;
-  padding: 12px;
+  padding: 12px 12px 0 0;
 }
+/*#endregion*/
 
 /*ES: area de formato para tablets y moviles - EN: format area for tablets and smartphones*/
+/*#region*/
 @media screen and (max-width: 1200px) {
   #main-container {
     width: 90%;
@@ -251,6 +405,7 @@ body {
 
   #right-header {
     display: grid;
+    gap: 0;
     grid-template-rows: repeat(3, minmax(0px, 1fr));
     grid-template-columns: repeat(2, minmax(0px, 1fr));
   }
@@ -273,15 +428,45 @@ body {
     width: 100%;
   }
 
-  #construction {
-    font-size: 38px;
-    margin: 0 auto;
-    padding: 10px 20px;
+  #portfolio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #portfolio-title-zero {
+    font-size: 1.5em;
+    grid-column: 1/3;
+   }
+
+  #portfolio-title-one {
+   font-size: 1.5em;
+   grid-column: 1/3;
+  }
+
+  #portfolio-title-two {
+    font-size: 1.5em;
+    grid-column: 1/3;
+  }
+
+  .portfolio {
+    position: relative;
+    grid-column: 1/3;
+    width: 90%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 250ms;
+  }
+
+  .portfolio > a {
+    font-size: .7em;
+  }
+
+  #footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   #copyright {
-    grid-area: 5/3/6/6;
-    font-size: 16px;
+    grid-area: 2/2/3/3;
+    font-size: .6em;
   }
 }
 
@@ -291,7 +476,7 @@ body {
   }
 
   .left-links::before {
-    font-size: 12px;
+    font-size: .9em;
   }
 
   .left-links:hover::before {
@@ -316,26 +501,48 @@ body {
   }
 
   .right-links {
-    font-size: 12px;
+    font-size: .8em;
   }
 
   #portfolio {
-    grid-area: 2/1/3/2
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  #services {
-    grid-area: 3/1/4/2
+  #portfolio-title-zero {
+    font-size: 1.5em;
+    grid-column: 1/2;
+   }
+
+  #portfolio-title-one {
+   font-size: 1.5em;
+   grid-column: 1/2;
   }
 
-  #construction {
-    font-size: 28px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px 20px;
+  #portfolio-title-two {
+    font-size: 1.5em;
+    grid-column: 1/2;
+  }
+
+  .portfolio {
+    position: relative;
+    grid-column: 1/2;
+    width: 80%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 250ms;
+  }
+
+  .portfolio > a {
+    font-size: .6em;
+  }
+
+  #footer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   #copyright {
-    grid-area: 5/3/6/6;
-    font-size: 12px;
+    grid-area: 3/1/4/2;
+    font-size: .5em;
   }
 }
+/*#endregion*/
