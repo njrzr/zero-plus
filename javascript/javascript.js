@@ -1,28 +1,38 @@
 let myGravatar = 'https://en.gravatar.com/angelus078.json';
+let hover = document.getElementsByClassName("portfolio-button");
+let button = document.getElementsByClassName("arrow-button");
+let logoHover = document.getElementById("logo");
+let logoChange = document.getElementById("logo-img");
+let addresses = []
 
-//Using XMLHttpRequest()
-/*let request = new XMLHttpRequest();
-
-request.open("GET", myGravatar, true);
-request.onload = function() {
-	let data = JSON.parse(this.response);
-	let avatar = data.entry[0].photos[0].value;
-	let logo = document.getElementById("logo");
-	logo.style.background = `url(${avatar})`;
-	logo.style.backgroundSize = "cover";
-}
-request.send()
-
-//Using the fetch api
 fetch(myGravatar)
-	.then((response) => {
-		return response.json();
-	})
-	.then((data) => {
-		let address = data.entry[0].currency[0].value;
-		let construction = document.getElementById("construction");
-		construction.innerHTML = `${address}`;
-	})
-	.catch((err) => {
-		console.log(err);
-	})*/
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    for(let i = 0;i < data.entry[0].currency.length;i++) {
+      addresses.push({
+        coin: data.entry[0].currency[i].type,
+        address: data.entry[0].currency[i].value
+      })
+    }
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+for(let i = 0;i < hover.length;i++) {
+  hover[i].addEventListener("mouseover", () => {
+    button[i].src = "images/arrow_1.svg";
+    hover[i].addEventListener("mouseleave", () => {
+      button[i].src = "images/arrow_2.svg";
+    })
+  })
+}
+
+logoHover.addEventListener("mouseover", () => {
+  logoChange.src = "images/logo2.png";
+  logoHover.addEventListener("mouseleave", () => {
+    logoChange.src = "images/logo1.png";
+  })
+})

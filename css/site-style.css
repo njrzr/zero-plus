@@ -25,7 +25,7 @@
 /*ES: Estilo general de la pagina - EN: General style of the website*/
 /*#region*/
 body {
-  background: #36454f;
+  background: #4169e1;
   font-family: 'JetBrainsMono';
   font-size: 24px;
 }
@@ -71,22 +71,22 @@ body {
   font-size: .65em;
   width: 40px;
   height: 40px;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .left-links:hover {
   width: 180px;
   height: 40px;
   background: #ffffff;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .link1::before, .link2::before, .link3::before {
   position: absolute;
   content: "";
-  background: #36454f;
+  background: #4169e1;
   color: #ffffff;
-  text-shadow: 2px 2px 0 #4169e1;
+  text-shadow: 2px 2px 0 #36454f;
   width: 0;
   height: 40px;
   padding: 10px 0 10px 20px;
@@ -126,6 +126,7 @@ body {
 .left-links > a > img {
   position: relative;
   display: block;
+  width: auto;
   height: 100%;
 }
 
@@ -139,17 +140,27 @@ body {
 
 #logo {
   position: relative;
-  background: #ffffff url("../images/logo2.png");
-  background-size: cover;
+  background: #ffffff;
   width: 120px;
   height: 100%;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 #logo:hover {
-  background: #36454f url("../images/logo1.png");
-  background-size: cover;
-  transition: 250ms;
+  background: #4169e1;
+  transition: 250ms ease-in-out;
+}
+
+#logo-img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#logo-img:hover {
+  filter: drop-shadow(0 0 2px #ffffff);
 }
 
 #logo > a {
@@ -175,7 +186,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   color: #36454f;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
   z-index: 1;
 }
 
@@ -183,7 +194,7 @@ body {
   position: absolute;
   background: #4169e188;
   color: #ffffff;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .right-links > a::before {
@@ -209,7 +220,7 @@ body {
 #welcome {
   position: relative;
   display: grid;
-  background: #4169e1;
+  background: #36454f;
   grid-template-columns: repeat(3, minmax(0px, 1fr));
   justify-content: space-around;
   align-items: center;
@@ -221,7 +232,7 @@ body {
 #welcome-text {
   position: relative;
   grid-area: 1/1/2/4;
-  background: #36454f;
+  background: #4169e1;
   font-size: .8em;
   text-align: justify;
   color: #ffffff;
@@ -261,7 +272,7 @@ body {
   left: 0px;
   bottom: 0px;
   z-index: -1;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 #portfolio-title-one {
@@ -284,7 +295,7 @@ body {
   left: 0px;
   bottom: 0px;
   z-index: -1;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 #portfolio-title-two {
@@ -313,13 +324,14 @@ body {
 .portfolio {
   position: relative;
   width: 70%;
+  height: auto;
   overflow: hidden;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .portfolio:hover {
   transform: scale(1.05);
-  transition: 250ms;
+  transition: 250ms ease-in-out;
   z-index: 1;
 }
 
@@ -332,12 +344,12 @@ body {
   text-align: center;
   width: 100%;
   padding-bottom: 10px;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .portfolio > a:hover {
-  background: #4169e1;
-  transition: 250ms;
+  background: #36454f;
+  transition: 250ms ease-in-out;
   font-weight: bold;
 }
 
@@ -352,19 +364,17 @@ body {
 .portfolio-button {
   position: relative;
   grid-column: 1/4;
-  background: #36454f url("../images/arrow_1.svg") no-repeat center;
-  background-size: 60%;
+  background: #4169e1;
   width: 40px;
   height: 40px;
-  border: solid 1px #ffffff;
+  border: solid 4px #ffffff;
   overflow: hidden;
-  transition: 250ms;
+  transition: 250ms ease-in-out;
 }
 
 .portfolio-button:hover {
-  background: #4169e1 url("../images/arrow_2.svg") no-repeat center;
-  background-size: 60%;
-  transition: 250ms;
+  background: #36454f;
+  transition: 250ms ease-in-out;
 }
 
 .portfolio-button > a {
@@ -375,11 +385,19 @@ body {
   z-index: 1;
 }
 
+.arrow-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
 #footer {
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  background: #4169e1;
+  background: #36454f;
   width: 100%;
   height: 120px;
   padding: 10px;
@@ -469,7 +487,7 @@ body {
     width: 90%;
     margin-bottom: 20px;
     overflow: hidden;
-    transition: 250ms;
+    transition: 250ms ease-in-out;
   }
 
   .portfolio > a {
@@ -554,7 +572,7 @@ body {
     width: 80%;
     margin-bottom: 20px;
     overflow: hidden;
-    transition: 250ms;
+    transition: 250ms ease-in-out;
   }
 
   .portfolio > a {
