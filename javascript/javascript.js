@@ -2,7 +2,8 @@ let myGravatar = 'https://en.gravatar.com/angelus078.json';
 let hover = document.getElementsByClassName("portfolio-button");
 let button = document.getElementsByClassName("arrow-button");
 let logoHover = document.getElementById("logo");
-let logoChange = document.getElementById("logo-img");
+let logoChange1 = document.getElementById("logo-img1");
+let logoChange2 = document.getElementById("logo-img2");
 let addresses = []
 
 fetch(myGravatar)
@@ -31,8 +32,15 @@ for(let i = 0;i < hover.length;i++) {
 }
 
 logoHover.addEventListener("mouseover", () => {
-  logoChange.src = "images/logo2.png";
+  logoChange1.src = "images/logo2.png";
   logoHover.addEventListener("mouseleave", () => {
-    logoChange.src = "images/logo1.png";
+    logoChange1.src = "images/logo1.png";
+  })
+})
+
+logoHover.addEventListener("mouseover", () => {
+  logoChange2.src = "images/logo_text2.png";
+  logoHover.addEventListener("mouseleave", () => {
+    logoChange2.src = "images/logo_text1.png";
   })
 })
