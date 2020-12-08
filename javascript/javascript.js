@@ -4,7 +4,7 @@ let button = document.getElementsByClassName("arrow-button");
 let logoHover = document.getElementById("logo");
 let logoChange1 = document.getElementById("logo-img1");
 let logoChange2 = document.getElementById("logo-img2");
-let addresses = []
+let addresses = [];
 
 fetch(myGravatar)
   .then((response) => {
@@ -27,20 +27,20 @@ for(let i = 0;i < hover.length;i++) {
     button[i].src = "images/arrow_1.svg";
     hover[i].addEventListener("mouseleave", () => {
       button[i].src = "images/arrow_2.svg";
-    })
-  })
+    });
+  });
 }
 
 logoHover.addEventListener("mouseover", () => {
   logoChange1.src = "images/logo2.png";
   logoHover.addEventListener("mouseleave", () => {
     logoChange1.src = "images/logo1.png";
-  })
-})
+  });
+});
 
 logoHover.addEventListener("mouseover", () => {
   logoChange2.src = "images/logo_text2.png";
   logoHover.addEventListener("mouseleave", () => {
     logoChange2.src = "images/logo_text1.png";
-  })
-})
+  });
+});
