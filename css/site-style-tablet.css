@@ -1,0 +1,106 @@
+@media screen and (max-width: 1200px) {
+  #main-container {
+    width: 90%;
+  }
+
+  #right-header {
+    display: grid;
+    gap: 0;
+    grid-template-rows: repeat(3, minmax(0px, 1fr));
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+
+  #logo {
+    grid-area: 1/2/4/3;
+    width: 100%;
+  }
+
+  #logo:hover {
+    background: #ffffff;
+  }
+
+  #logo-img1:hover {
+    filter: drop-shadow(0 0 0 #ffffff00);
+  }
+
+  #logo-img2 {
+    display: none;
+  }
+
+  .left-links {
+    width: 180px;
+  }
+
+  .link1::before, .link2::before, .link3::before {
+    width: 180px;
+    transform: scale(1, 1);
+  }
+
+  .right-links {
+    width: 100%;
+  }
+
+  .right-links > a {
+    position: absolute;
+    background: #4169e188;
+    color: #ffffff;
+  }
+
+  .right-links > a::before {
+    transform: scale(1, .1);
+  }
+
+  #welcome-text {
+    font-size: .7em;
+  }
+
+  #portfolio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "title-1 title-1"
+                         "client-1 ."
+                         "button-1 button-1"
+                         "title-2 title-2"
+                         "personal-1 personal-2"
+                         "button-2 button-2"
+                         "title-3 title-3"
+                         "fcc-1 fcc-2"
+                         "fcc-3 fcc-4"
+                         "button-3 button-3";
+  }
+
+  #portfolio-title-one, #portfolio-title-two, #portfolio-title-three {
+    font-size: 1.4em;
+  }
+
+  .portfolio {
+    width: 90%;
+    margin-bottom: 20px;
+    background: #36454f;
+  }
+
+  .portfolio:hover {
+    transform: none;
+  }
+
+  .portfolio > a:hover {
+    font-weight: normal;
+  }
+
+  .portfolio > a {
+    font-size: .7em;
+  }
+
+  #footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #contacts {
+    grid-area: 1/1/2/2;
+    font-size: .6em;
+  }
+
+  #copyright {
+    grid-area: 1/2/2/3;
+    font-size: .6em;
+  }
+}

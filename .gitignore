@@ -1,1 +1,3 @@
 .editorconfig
+images/logo.svg
+*.code-workspace
