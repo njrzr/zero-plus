@@ -54,7 +54,6 @@
   #portfolio {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-template-areas: "title-1"
-                         "client-1"
                          "button-1"
                          "title-2"
                          "personal-1"

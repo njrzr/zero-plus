@@ -247,7 +247,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0px, 1fr));
   grid-template-areas: "title-1 title-1 title-1"
-                       "client-1 . ."
                        "button-1 button-1 button-1"
                        "title-2 title-2 title-2"
                        "personal-1 personal-2 ."
@@ -381,10 +380,6 @@ body {
 /*ES: formato de area grilla - EN: grid area format*/
 #portfolio-title-one {
   grid-area: title-1;
-}
-
-.client-1 {
-  grid-area: client-1;
 }
 
 .button-1 {
