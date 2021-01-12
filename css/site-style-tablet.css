@@ -64,10 +64,14 @@
                          "title-3 title-3"
                          "fcc-1 fcc-2"
                          "fcc-3 fcc-4"
-                         "button-3 button-3";
+                         "button-3 button-3"
+                         "title-4 title-4"
+                         "mockup-1 mockup-2"
+                         "mockup-3 ."
+                         "button-4 button-4";
   }
 
-  #portfolio-title-one, #portfolio-title-two, #portfolio-title-three {
+  #portfolio-title-one, #portfolio-title-two, #portfolio-title-three, #portfolio-title-four {
     font-size: 1.4em;
   }
 

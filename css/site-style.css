@@ -233,7 +233,7 @@ body {
 
 #welcome-text {
   position: relative;
-  grid-area: 1/1/2/4;
+  grid-column: 1/4;
   background: #4169e1;
   font-size: .8em;
   text-align: justify;
@@ -254,7 +254,10 @@ body {
                        "title-3 title-3 title-3"
                        "fcc-1 fcc-2 fcc-3"
                        "fcc-4 . ."
-                       "button-3 button-3 button-3";
+                       "button-3 button-3 button-3"
+                       "title-4 title-4 title-4"
+                       "mockup-1 mockup-2 mockup-3"
+                       "button-4 button-4 button-4";
   justify-items: center;
   gap: 10px;
   width: 100%;
@@ -263,7 +266,7 @@ body {
   border-bottom: solid 5px #ffffff;
 }
 
-#portfolio-title-one, #portfolio-title-two, #portfolio-title-three {
+#portfolio-title-one, #portfolio-title-two, #portfolio-title-three, #portfolio-title-four {
   position: relative;
   color: #ffffff;
   width: 100%;
@@ -273,7 +276,7 @@ body {
   z-index: 1;
 }
 
-#portfolio-title-one::before, #portfolio-title-two::before, #portfolio-title-three::before {
+#portfolio-title-one::before, #portfolio-title-two::before, #portfolio-title-three::before, #portfolio-title-four::before {
   content: "";
   position: absolute;
   background: #ffffff;
@@ -424,4 +427,25 @@ body {
 
 .button-3 {
   grid-area: button-3;
+}
+
+#portfolio-title-four {
+  grid-area: title-4;
+}
+
+.mockup-1 {
+  grid-area: mockup-1;
+}
+
+.mockup-2 {
+  grid-area: mockup-2;
+}
+
+.mockup-3 {
+  grid-area: mockup-3;
+}
+
+
+.button-4 {
+  grid-area: button-4;
 }

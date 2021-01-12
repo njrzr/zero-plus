@@ -1,0 +1,3 @@
+[submodule "mockup_bakery"]
+	path = mockup_bakery
+	url = ./

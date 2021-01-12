@@ -1,0 +1,665 @@
+/*ES: formato basico de la pagina*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 32px;
+}
+
+/*ES: formato de la pagina*/
+/*#region*/
+#main-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  font-family: "Merienda";
+  overflow: hidden;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background: #5d0c1d;
+  overflow: hidden;
+}
+
+#logo {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  top: 15px;
+  left: 100px;
+  filter: drop-shadow(0 0 5px #ffffff);
+  border-radius: 60px;
+}
+
+#lema {
+  position: relative;
+  display: inline-block;
+  font-size: 1.35em;
+  width: 40%;
+  top: -30px;
+  left: 120px;
+  color: #ffffff;
+}
+
+.menu {
+  position: absolute;
+  visibility: hidden;
+  top: 50px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.menu-click {
+  background: #ffffff;
+  color: #5d0c1d;
+}
+
+.navbar {
+  position: relative;
+  top: 50px;
+  right: 100px;
+  width: auto;
+  height: auto;
+  float: right;
+} 
+
+.navlink {
+   display: inline-block;
+   list-style: none;
+   overflow: hidden;
+}
+
+.navlink > a {
+   font-size: .75em;
+   color: #ffffff;
+   text-decoration: none;
+   padding: 10px;
+   transition: 250ms linear;
+}
+
+.navlink > a:hover {
+   color: #5d0c1d;
+   background: #ffffff;
+   transition: 250ms linear;
+}
+
+#hero-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url("../images/background01.webp") center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#about {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #5d0c1d;
+  overflow: hidden;
+}
+
+#about-text {
+  position: relative;
+  color: #ffffff;
+  font-size: 2.25em;
+  padding-left: 30px;
+}
+
+#about-description {
+  position: relative;
+  color: white;
+  text-align: justify;
+  font-size: .8em;
+  margin: 10px 0;
+  padding: 20px 50px;
+}
+
+.item {
+  position: relative;
+  width: 280px;
+  height: auto;
+  margin: auto;
+  background: #ffffff88;
+  overflow: hidden;
+  transition: 250ms;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  transition: 250ms;
+}
+
+.item > img {
+  position: relative;
+  width: 280px;
+  height: 157.5px;
+}
+
+.item-name {
+  position: relative;
+  color: #ffffff;
+  font-size: .75em;
+  text-shadow: 1px 1px 1px #000000;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.item-price {
+  position: relative;
+  background: #5d0c1d;
+  width: 110%;
+  padding: 10px 20px 10px 10px;
+  left: -5%;
+  transform: rotate(-5deg);
+  text-align: right;
+  color: #ffffff;
+  font-size: .75em;
+}
+
+#desserts, #salted {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#desserts {
+  grid-template-areas: "title title title title"
+                       "dessert-01 dessert-02 dessert-03 dessert-04"
+                       "dessert-05 dessert-06 dessert-07 dessert-08";
+}
+
+#salted {
+  grid-template-areas: "title title title title"
+                       "salted-01 salted-02 salted-03 salted-04"
+                       "salted-05 salted-06 salted-07 salted-08";
+}
+
+#desserts::before, #salted::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+}
+
+#desserts {
+  background: url("../images/background02.webp") center;
+  background-size: cover;
+}
+
+#salted {
+  background: url("../images/background03.webp") center;
+  background-size: cover;
+}
+
+#desserts-text, #salted-text {
+  position: relative;
+  text-align: right;
+  color: #ffffff;
+  font-size: 2.25em;
+  padding-right: 60px;
+  text-shadow: 2px 2px 2px #000000;
+  grid-area: title;
+}
+
+.item-dessert-01 {
+  grid-area: dessert-01;
+}
+
+.item-dessert-02 {
+  grid-area: dessert-02;
+}
+
+.item-dessert-03 {
+  grid-area: dessert-03;
+}
+
+.item-dessert-04 {
+  grid-area: dessert-04;
+}
+
+.item-dessert-05 {
+  grid-area: dessert-05;
+}
+
+.item-dessert-06 {
+  grid-area: dessert-06;
+}
+
+.item-dessert-07 {
+  grid-area: dessert-07;
+}
+
+.item-dessert-08 {
+  grid-area: dessert-08;
+}
+
+.separator {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #5d0c1d;
+}
+
+.item-salted-01 {
+  grid-area: salted-01;
+}
+
+.item-salted-02 {
+  grid-area: salted-02;
+}
+
+.item-salted-03 {
+  grid-area: salted-03;
+}
+
+.item-salted-04 {
+  grid-area: salted-04;
+}
+
+.item-salted-05 {
+  grid-area: salted-05;
+}
+
+.item-salted-06 {
+  grid-area: salted-06;
+}
+
+.item-salted-07 {
+  grid-area: salted-07;
+}
+
+.item-salted-08 {
+  grid-area: salted-08;
+}
+
+#footer {
+  position: relative;
+  font-family: "Alegreya";
+  display: swap;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas: "location logo contacts"
+                       "site-copy site-copy site-copy";
+  gap: 10px;
+  width: 100%;
+  background: #5d0c1d;
+  color: #ffffff;
+  padding: 20px;
+}
+
+#location {
+  position: relative;
+  grid-area: location;
+  padding: 10px;
+}
+
+#location > p {
+  font-size: .8em;
+}
+
+#location-text {
+  text-align: right;
+}
+
+#logo-foot {
+  position: relative;
+  grid-area: logo;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  filter: drop-shadow(0 0 5px #ffffff);
+  border-radius: 60px;
+}
+
+#contacts {
+  position: relative;
+  grid-area: contacts;
+  padding: 10px;
+}
+
+#contacts > p {
+  font-size: .8em;
+}
+
+#whatsapp, #instagram {
+  position: relative;
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 2px;
+  overflow: hidden;
+  transition: 250ms;
+}
+
+#whatsapp:hover, #instagram:hover {
+  transform: scale(1.05);
+  transition: 250ms;
+}
+
+#whatsapp > img, #instagram > img {
+  width: 100%;
+  height: 100%;
+}
+
+#site-copy {
+  position: relative;
+  height: auto;
+  grid-area: site-copy;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#site-text {
+  position: relative;
+  display: inline-block;
+  top: -22px;
+  font-size: .65em;
+}
+
+#logo-link {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#logo-site {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 250ms;
+}
+
+#logo-site:hover {
+  transform: scale(1.05);
+  transition: 250ms;
+}
+
+#copy {
+  position: relative;
+  float: right;
+  font-size: .65em;
+  top: 30px;
+}
+/*#endregion*/
+
+/*ES: formato para dispositivos moviles*/
+/*#region*/
+@media screen and (max-width: 1200px) {
+  #header {
+    overflow: visible;
+  }
+
+  #logo {
+    left: 60px;
+  }
+
+  #lema {
+    top: -85px;
+    left: 200px;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .menu {
+    visibility: visible;
+  }
+
+  .navbar {
+    display: none;
+    top: 105px;
+    right: 30px;
+    z-index: 1;
+  }
+
+  .navbar-show {
+    display: initial;
+    position: absolute;
+    background: #ffffff;
+  }
+
+  .navlink {
+    display: block;
+     border: green;
+  }
+
+  .navlink > a {
+    color: #5d0c1d;
+  }
+
+  #about-text {
+    font-size: 1.5em;
+    padding-left: 20px;
+  }
+
+  #about-description {
+    font-size: .6em;
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  .item {
+    width: 220px;
+    height: auto;
+    margin: auto;
+  }
+
+  .item:hover {
+    transform: none;
+  }
+
+  .item > img {
+    position: relative;
+    display: block;
+    width: 220px;
+    height: 123.75px;
+    margin: auto;
+  }
+
+  .item-name {
+    margin-top: 5px;
+  }
+
+  #desserts-text, #salted-text {
+    font-size: 1.5em;
+    padding-right: 30px;
+  }
+
+  #desserts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "title title title"
+                         "dessert-01 dessert-02 dessert-03"
+                         "dessert-04 dessert-05 dessert-06"
+                         "dessert-07 dessert-08 .";
+  }
+
+  #salted {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "title title title"
+                         "salted-01 salted-02 salted-03"
+                         "salted-04 salted-05 salted-06"
+                         "salted-07 salted-08 .";
+  }
+
+  #footer {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "location logo contacts"
+                         "site-copy site-copy site-copy";
+  }
+
+  #whatsapp:hover, #instagram:hover {
+    transform: none;
+  }
+
+  #logo-site:hover {
+    transform: none;
+  }
+}
+/*#endregion*/
+
+/*#region*/
+@media screen and (max-width: 550px) {
+  #header {
+    height: 200px;
+  }
+
+  #logo {
+    display: block;
+    top: 20px;
+    left: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+
+  #lema {
+    display: block;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+  }
+
+  .menu {
+    top: 10px;
+    right: 10px;
+    font-size: 1em;
+  }
+
+  .navbar {
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+  }
+
+  .navlink > a {
+    font-size: .6em;
+  }
+
+  #about {
+    padding: 20px 0;
+  }
+
+  #about-text {
+    font-size: 1.2em;
+    padding-left: 20px;
+  }
+
+  #about-description {
+    font-size: .6em;
+    margin: 10px;
+  }
+
+  .item {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+
+  .item:hover {
+    transform: none;
+  }
+
+  .item > img {
+    position: relative;
+    width: 300px;
+    height: 168.75px;
+  }
+
+  .item-name {
+    margin-top: 5px;
+    font-size: .65em;
+  }
+
+  .item-price {
+    font-size: .65em;
+  }
+
+  #desserts-text, #salted-text {
+    font-size: 1.4em;
+    padding-right: 20px;
+  }
+
+  #desserts {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-areas: "title"
+                         "dessert-01"
+                         "dessert-02"
+                         "dessert-03"
+                         "dessert-04"
+                         "dessert-05"
+                         "dessert-06"
+                         "dessert-07"
+                         "dessert-08";
+  }
+
+  #salted {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-areas: "title"
+                         "salted-01"
+                         "salted-02"
+                         "salted-03"
+                         "salted-04"
+                         "salted-05"
+                         "salted-06"
+                         "salted-07"
+                         "salted-08";
+  }
+
+  #footer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-areas: "logo"
+                         "location"
+                         "contacts"
+                         "site-copy";
+  }
+
+  #contacts > p, #location > p {
+    font-size: .6em;
+  }
+
+  #whatsapp:hover, #instagram:hover {
+    transform: none;
+  }
+
+  #logo-foot {
+    width: 100px;
+    height: 100px;
+  }
+
+  #logo-site:hover {
+    transform: none;
+  }
+
+  #site-text, #copy {
+    font-size: .4em;
+  }
+
+  #site-copy {
+    padding: 0;
+  }
+}
+/*#endregion*/
