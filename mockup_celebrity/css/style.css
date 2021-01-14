@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-size: 32px;
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0000ff;
+  z-index: 10;
+}
+
+#load-animation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-top: 4px solid #ffffff;
+  border-right: 4px solid #ffffff00;
+  border-bottom: 4px solid #ffffff00;
+  border-left: 4px solid #ffffff00;
+  border-radius: 50px;
+  animation: spin 500ms infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(-0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.hide {
+  display: none;
+}
+
+#main-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #000000;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #c0c0c0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#celebrity-name {
+  font-size: 1.5em;
+  font-style: italic;
+  text-align: center;
+  transform: rotate(-5deg);
+  text-shadow: 4px 0 0 #ffffff;
+}
+
+#celebrity-bold {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#hero-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas: "banner01 banner01 banner02 banner03"
+                       "banner01 banner01 banner04 banner05";
+  overflow: hidden;
+}
+
+#banner01 {
+  grid-area: banner01;
+  background: url("../images/pic03.webp") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+
+#banner02 {
+  grid-area: banner02;
+  background: url("../images/pic02.webp") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+#banner03 {
+  grid-area: banner03;
+  background: url("../images/pic01.webp") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+#banner04 {
+  grid-area: banner04;
+  background: url("../images/pic04.webp") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+#banner05 {
+  grid-area: banner05;
+  background: url("../images/pic05.webp") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+#about-artist {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #c0c0c0;
+  padding: 10px;
+}
+
+.about {
+  font-size: .75em;
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.title {
+  position: relative;
+  padding: 10px 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+  background: #000000;
+  transform: scale(.75, 1);
+}
+
+.desc {
+  text-align: justify;
+}
+
+#pictures {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+#pic-text {
+  position: relative;
+  padding: 10px 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  z-index: 3;
+}
+
+#pic-text::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+  background: #ffffff;
+  transform: scale(.75, 1);
+}
+
+#photo-reel {
+  position: absolute;
+  width: 1008px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+#photo-show {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#previous-button {
+  position: absolute;
+  width: 100px;
+  height: 600px;
+  padding: 0 20px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 4;
+}
+
+#previous-button:hover {
+  background: #c0c0c088;
+}
+
+#left-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+#next-button {
+  position: absolute;
+  width: 100px;
+  height: 600px;
+  padding: 0 20px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#next-button:hover {
+  background: #c0c0c088;
+}
+
+#right-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+#merchandise {
+  position: relative;
+  width: 100%;
+  background: #c0c0c0;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-areas: "merc-title merc-title merc-title merc-title merc-title"
+                       "merc01 merc02 merc03 merc04 merc05"
+                       "merc06 merc07 merc08 merc09 merc10"
+                       "merc11 merc12 merc13 merc14 merc15";
+}
+
+#mer-text {
+  position: relative;
+  grid-area: merc-title;
+  padding: 10px 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+#mer-text::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+  background: #000000;
+  transform: scale(.75, 1);
+}
+
+.merc-item {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  padding: 10px;
+  margin: auto;
+  background: #c0c0c0;
+  border: 4px solid #000000;
+  overflow: hidden;
+}
+
+.merc-img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  background: #ffffff;
+}
+
+.merc01 {
+  grid-area: merc01;
+}
+
+.merc02 {
+  grid-area: merc02;
+}
+
+.merc03 {
+  grid-area: merc03;
+}
+
+.merc04 {
+  grid-area: merc04;
+}
+
+.merc05 {
+  grid-area: merc05;
+}
+
+.merc06 {
+  grid-area: merc06;
+}
+
+.merc07 {
+  grid-area: merc07;
+}
+
+.merc08 {
+  grid-area: merc08;
+}
+
+.merc09 {
+  grid-area: merc09;
+}
+
+.merc10 {
+  grid-area: merc10;
+}
+
+.merc11 {
+  grid-area: merc11;
+}
+
+.merc12 {
+  grid-area: merc12;
+}
+
+.merc13 {
+  grid-area: merc13;
+}
+
+.merc14 {
+  grid-area: merc14;
+}
+
+.merc15 {
+  grid-area: merc15;
+}
+
+.merc-desc {
+  font-size: .75em;
+}
+
+.merc-btn {
+  position: absolute;
+  display: block;
+  padding: 6px;
+  font-size: .5em;
+  margin: auto;
+  bottom: 10px;
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#social-media {
+  position: relative;
+  width: 290px;
+  margin: auto;
+}
+
+#follow {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  overflow: hidden;
+  transition: 250ms linear;
+}
+
+.social-link:hover {
+  background: #ffffff88;
+  transform: scale(1.1);
+  transition: 250ms linear;
+}
+
+.social-media {
+  width: 100%;
+  height: 100%;
+}
+
+#copy {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  font-size: .75em;
+}
