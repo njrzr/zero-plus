@@ -1,0 +1,68 @@
+@media screen and (max-width: 500px) {
+  #celebrity-name {
+    font-size: 1em;
+  }
+
+  #hero-banner {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-areas: "banner01"
+                         "banner02"
+                         "banner03"
+                         "banner04"
+                         "banner05";
+  }
+
+  #banner01 {
+    height: 300px;
+  }
+
+  #banner02, #banner03, #banner04, #banner05 {
+    height: 200px;
+  }
+
+  .title, #pic-text, #mer-text {
+    font-size: 1em;
+  }
+
+  .desc {
+    font-size: .5em;
+  }
+
+  #pictures {
+    height: 300px;
+  }
+
+  #photo-reel {
+    width: 350px;
+  }
+
+  #previous-button, #next-button {
+    padding: 0 10px;
+    width: 50px;
+    height: 300px;
+  }
+
+  #merchandise {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-areas: "merc-title"
+                         "merc01"
+                         "merc02"
+                         "merc03"
+                         "merc04"
+                         "merc05"
+                         "merc06"
+                         "merc07"
+                         "merc08"
+                         "merc09"
+                         "merc10"
+                         "merc11"
+                         "merc12"
+                         "merc13"
+                         "merc14"
+                         "merc15";
+  }
+
+  .merc-item {
+    width: 300px;
+  }
+}

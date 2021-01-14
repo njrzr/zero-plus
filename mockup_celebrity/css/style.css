@@ -11,7 +11,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #0000ff;
+  background: #000000;
   z-index: 10;
 }
 
@@ -50,6 +50,10 @@
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 #header {
   position: relative;
   width: 100%;
@@ -83,7 +87,7 @@
 
 #banner01 {
   grid-area: banner01;
-  background: url("../images/pic03.webp") no-repeat;
+  background: url("../images/pic03.webp") center no-repeat;
   background-size: cover;
   width: 100%;
   height: 600px;
@@ -91,7 +95,7 @@
 
 #banner02 {
   grid-area: banner02;
-  background: url("../images/pic02.webp") no-repeat;
+  background: url("../images/pic02.webp") center no-repeat;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -99,7 +103,7 @@
 
 #banner03 {
   grid-area: banner03;
-  background: url("../images/pic01.webp") no-repeat;
+  background: url("../images/pic01.webp") center no-repeat;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -107,7 +111,7 @@
 
 #banner04 {
   grid-area: banner04;
-  background: url("../images/pic04.webp") no-repeat;
+  background: url("../images/pic04.webp") center no-repeat;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -115,7 +119,7 @@
 
 #banner05 {
   grid-area: banner05;
-  background: url("../images/pic05.webp") no-repeat;
+  background: url("../images/pic05.webp") center no-repeat;
   background-size: cover;
   width: 100%;
   height: 300px;
@@ -365,12 +369,21 @@
 }
 
 .merc-btn {
-  position: absolute;
+  position: relative;
   display: block;
-  padding: 6px;
-  font-size: .5em;
+  background: linear-gradient(#ffd700, #c0c0c0);
   margin: auto;
-  bottom: 10px;
+  padding: 4px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  font-size: .5em;
+  color: #ffffff;
+  cursor: pointer;
+  transform: translateY(50px);
+}
+
+.merc-btn:active {
+  background: #ffd700;
 }
 
 #footer {

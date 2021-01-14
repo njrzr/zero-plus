@@ -45,7 +45,7 @@ body {
 #header {
   position: relative;
   display: grid;
-  background: #4169e1 url("../images/bg_02.webp") center;
+  background: #4169e1 url("../images/bg_01.webp") center;
   background-size: cover;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   width: 100%;

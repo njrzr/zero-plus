@@ -1,7 +1,9 @@
 let loader = document.getElementById("loader");
+let hidden = document.querySelector(".hidden");
 
 window.addEventListener("load", () => {
   loader.classList.toggle("hide");
+  hidden.classList.toggle("hidden");
 })
 
 let photoIndex = 0;

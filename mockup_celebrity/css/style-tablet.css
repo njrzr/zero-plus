@@ -1,0 +1,32 @@
+@media screen and (max-width: 1200px) {
+  #hero-banner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "banner01 banner01"
+                         "banner02 banner03"
+                         "banner04 banner05";
+  }
+
+  .desc {
+    font-size: .7em;
+  }
+
+  #photo-reel {
+    width: 550px;
+  }
+
+  #merchandise {
+    position: relative;
+    width: 100%;
+    background: #c0c0c0;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "merc-title merc-title merc-title"
+                         "merc01 merc02 merc03"
+                         "merc04 merc05 merc06"
+                         "merc07 merc08 merc09"
+                         "merc10 merc11 merc12"
+                         "merc13 merc14 merc15";
+  }
+}
