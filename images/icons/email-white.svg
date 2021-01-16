@@ -1,0 +1,13 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_3" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m442.872,82.934l-14.361,0l-0.014,0l-172.494,136.586l-172.504,-136.586l-2.726,0l-11.648,0c-23.802,0 -43.124,19.37 -43.124,43.241l0,259.446c0,23.867 19.322,43.24 43.124,43.24l13.939,0l0.434,0l0,-269.651l172.504,133.038l172.494,-133.07l0,254.389l0,15.295l14.375,0c23.805,0 43.127,-19.373 43.127,-43.24l0,-259.447c0.001,-23.87 -19.317,-43.241 -43.126,-43.241z"/>
+  <polygon id="svg_4" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="    428.497,82.934 83.499,82.934 256.003,219.52   "/>
+  <polygon id="svg_5" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="    256.003,292.248 83.499,159.21 83.499,428.861 83.064,428.861 83.064,429.066 428.397,429.066 428.397,413.566 428.497,413.566     428.497,159.178   "/>
+ </g>
+</svg>
