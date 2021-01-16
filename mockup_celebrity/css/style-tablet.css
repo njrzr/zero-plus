@@ -14,6 +14,16 @@
     width: 550px;
   }
 
+  #previous-button, #next-button {
+    background: #ffffff88;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    top: 0;
+    bottom: 0;
+  }
+
   #merchandise {
     position: relative;
     width: 100%;
@@ -23,10 +33,11 @@
     padding: 10px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas: "merc-title merc-title merc-title"
-                         "merc01 merc02 merc03"
-                         "merc04 merc05 merc06"
-                         "merc07 merc08 merc09"
-                         "merc10 merc11 merc12"
-                         "merc13 merc14 merc15";
+                         "cds cds cds"
+                         "cd01 cd02 cd03"
+                         "cd04 cd05 ."
+                         "apparel apparel apparel"
+                         "apparel01 apparel02 apparel03"
+                         "apparel04 apparel05 .";
   }
 }

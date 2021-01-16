@@ -219,6 +219,7 @@
   top: 0;
   left: 0;
   cursor: pointer;
+  overflow: hidden;
   z-index: 4;
 }
 
@@ -229,6 +230,7 @@
 #left-arrow {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 #next-button {
@@ -239,6 +241,7 @@
   top: 0;
   right: 0;
   cursor: pointer;
+  overflow: hidden;
   z-index: 5;
 }
 
@@ -249,6 +252,7 @@
 #right-arrow {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 #merchandise {
@@ -260,9 +264,10 @@
   padding: 10px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-areas: "merc-title merc-title merc-title merc-title merc-title"
-                       "merc01 merc02 merc03 merc04 merc05"
-                       "merc06 merc07 merc08 merc09 merc10"
-                       "merc11 merc12 merc13 merc14 merc15";
+                       "cds cds cds cds cds"
+                       "cd01 cd02 cd03 cd04 cd05"
+                       "apparel apparel apparel apparel apparel"
+                       "apparel01 apparel02 apparel03 apparel04 apparel05";
 }
 
 #mer-text {
@@ -286,82 +291,75 @@
   transform: scale(.75, 1);
 }
 
+#cds {
+  font-weight: bold;
+  border-right: 5px solid #000000;
+  grid-area: cds;
+}
+
+#apparel {
+  font-weight: bold;
+  border-right: 5px solid #000000;
+  grid-area: apparel;
+}
+
 .merc-item {
   position: relative;
   width: 250px;
-  height: 300px;
+  height: auto;
   padding: 10px;
   margin: auto;
   background: #c0c0c0;
   border: 4px solid #000000;
-  overflow: hidden;
 }
 
 .merc-img {
   display: block;
-  width: 100%;
-  height: 150px;
+  margin: auto;
+  width: 220px;
+  height: 170px;
+  object-fit: cover;
   background: #ffffff;
 }
 
-.merc01 {
-  grid-area: merc01;
+.cd01 {
+  grid-area: cd01;
 }
 
-.merc02 {
-  grid-area: merc02;
+.cd02 {
+  grid-area: cd02;
 }
 
-.merc03 {
-  grid-area: merc03;
+.cd03 {
+  grid-area: cd03;
 }
 
-.merc04 {
-  grid-area: merc04;
+.cd04 {
+  grid-area: cd04;
 }
 
-.merc05 {
-  grid-area: merc05;
+.cd05 {
+  grid-area: cd05;
 }
 
-.merc06 {
-  grid-area: merc06;
+.apparel01 {
+  grid-area: apparel01;
 }
 
-.merc07 {
-  grid-area: merc07;
+.apparel02 {
+  grid-area: apparel02;
 }
 
-.merc08 {
-  grid-area: merc08;
+.apparel03 {
+  grid-area: apparel03;
 }
 
-.merc09 {
-  grid-area: merc09;
+.apparel04 {
+  grid-area: apparel04;
 }
 
-.merc10 {
-  grid-area: merc10;
-}
-
-.merc11 {
-  grid-area: merc11;
-}
-
-.merc12 {
-  grid-area: merc12;
-}
-
-.merc13 {
-  grid-area: merc13;
-}
-
-.merc14 {
-  grid-area: merc14;
-}
-
-.merc15 {
-  grid-area: merc15;
+.apparel05 {
+  grid-area: apparel05;
 }
 
 .merc-desc {
@@ -372,14 +370,13 @@
   position: relative;
   display: block;
   background: linear-gradient(#ffd700, #c0c0c0);
-  margin: auto;
+  margin: 20px auto;
   padding: 4px;
   border: 2px solid #ffffff;
   border-radius: 5px;
   font-size: .5em;
   color: #ffffff;
   cursor: pointer;
-  transform: translateY(50px);
 }
 
 .merc-btn:active {
