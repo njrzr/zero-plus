@@ -3,7 +3,11 @@ let hover = document.getElementsByClassName("portfolio-button");
 let button = document.getElementsByClassName("arrow-button");
 let logoHover = document.getElementById("logo");
 let logoChange = document.getElementById("logo-img1");
+let yearText = document.getElementById("year");
 let addresses = [];
+let date = new Date().getFullYear();
+
+yearText.innerHTML = date;
 
 fetch(myGravatar)
   .then((response) => {
