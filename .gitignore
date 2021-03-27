@@ -2,8 +2,6 @@
 *.code-workspace
 images/pic_profile.webp
 mockup_landing/node_modules
-mockup_landing/node_modules
-mockup_landing/css/tailwind.css
 mockup_landing/package-lock.json
 mockup_landing/package.json
 mockup_landing/postcss.config.js
