@@ -1,6 +1,9 @@
 .editorconfig
 *.code-workspace
 images/pic_profile.webp
+mockup_landing/images/*.jpeg
+mockup_landing/images/*.jpg
+mockup_landing/images/*.png
 mockup_landing/node_modules
 mockup_landing/package-lock.json
 mockup_landing/package.json
