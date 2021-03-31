@@ -976,6 +976,10 @@ span {
     margin-bottom: 0px;
   }
 
+  .md\:mr-8 {
+    margin-right: 2rem;
+  }
+
   .md\:mr-10 {
     margin-right: 2.5rem;
   }
